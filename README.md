@@ -2,7 +2,7 @@
 
 ## Environment
 1) Install idea Community edition (or Ultimate - 30 days eval. period)
-https://www.jetbrains.com/ru-ru/idea/download/
+    - https://www.jetbrains.com/ru-ru/idea/download/
 1) Generate Zookeeper Cluster: https://bit.ly/2xF8pDY
     - Sign in with Docker ID (Registration needed)
 1) Create Spring project
