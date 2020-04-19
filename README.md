@@ -63,6 +63,8 @@ spring:
 ### Create Second Spring project
 https://start.spring.io/#!type=maven-project&language=kotlin&platformVersion=2.2.6.RELEASE&packaging=jar&jvmVersion=1.8&groupId=com.example&artifactId=demo&name=demo&description=Demo%20project%20for%20Spring%20Boot&packageName=com.example.demo&dependencies=actuator,cloud-starter-zookeeper-discovery,cloud-starter-zookeeper-config,web
 
+    Add annotation @EnableDiscoveryClient on Service2Application class (on starter class)
+
 ### MyDiscoveryEndpoint
   ```kotlin
   @RestController
@@ -113,6 +115,24 @@ spring:
     zookeeper:
       connect-string: localhost:2181
 ```
+
+### Edit SERVICE_1 application.yml 
+- Activate discovery in properties with adding __spring.cloud.zookeeper.discovery.enabled: true__ like you can see below:
+    ```yml
+    server:
+        port: 8082
+    spring:
+      application:
+        name: micro_service_2
+      cloud:
+        zookeeper:
+          connect-string: localhost:2181
+          discovery:
+            enabled: true
+    ```
+
+- Add annotation __@EnableDiscoveryClient__ on Service1Application class (on starter class)
+
 
 ## Analogs: 
  - Consul and Valut (Hashicorp)
