@@ -3,12 +3,19 @@
 ## Environment
 1) Install idea Community edition (or Ultimate - 30 days eval. period)
     - https://www.jetbrains.com/ru-ru/idea/download/
-1) Generate Zookeeper Cluster: https://bit.ly/2xF8pDY
-    - Sign in with Docker ID (Registration needed)
+1) Setup Zookeper: 
+    - Download and unzip: http://zookeeper.apache.org/releases.html#download
+    - Create folder "data" in root of unzip directory.
+    - Rename __"zoo_sample.cfg"__ to __"zoo.cfg"__.
+    - Find __"dataDir"__ variable in file __"zoo.cfg"__ and change to path of created __"data"__ folder.
+    - Open folder "bin".
+    - Execute __zkserver__.
 1) Create Spring project
     - https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.2.6.RELEASE&packaging=jar&jvmVersion=1.8&groupId=com.example&artifactId=demo&name=demo&description=Demo%20project%20for%20Spring%20Boot&packageName=com.example.demo&dependencies=actuator,cloud-starter-zookeeper-discovery,cloud-starter-zookeeper-config,web
 1) Install Idea Plugin
     - __Zoolytic__ (Zookeeper Client)
+    - Restart Idea
+    - Choose View -> Tool Windows -> Zoolytic
 
 ## Example
 
