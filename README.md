@@ -68,7 +68,9 @@ https://start.spring.io/#!type=maven-project&language=kotlin&platformVersion=2.2
     Add annotation @EnableDiscoveryClient on Service2Application class (on starter class)
 
 ### pom.xml
+
     Add dependancy: 
+    
     ```xml
     <dependency>
         <groupId>org.springframework.cloud</groupId>
