@@ -126,6 +126,8 @@ spring:
   cloud:
     zookeeper:
       connect-string: localhost:2181
+      discovery:
+        enabled: true
 ```
 
 ### Edit SERVICE_1 application.yml 
