@@ -130,10 +130,10 @@ spring:
 - Activate discovery in properties with adding __spring.cloud.zookeeper.discovery.enabled: true__ like you can see below:
     ```yml
     server:
-        port: 8082
+        port: 8081
     spring:
       application:
-        name: micro_service_2
+        name: micro_service_1
       cloud:
         zookeeper:
           connect-string: localhost:2181
