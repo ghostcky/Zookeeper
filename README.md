@@ -96,7 +96,7 @@ https://start.spring.io/#!type=maven-project&language=kotlin&platformVersion=2.2
         fun home(): String;
     }
     
-    fun HelloWorld(): String {
+    fun show(): String {
         return theClient.home();
     }
   }
