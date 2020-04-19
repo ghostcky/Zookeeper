@@ -50,7 +50,7 @@ server:
     port: 8081
 spring:
   application:
-    name: micro_service_1
+    name: microservice1
   cloud:
     zookeeper:
       connect-string: localhost:2181
@@ -87,7 +87,7 @@ https://start.spring.io/#!type=maven-project&language=kotlin&platformVersion=2.2
 
     @GetMapping("/discovery-example")
     fun discoveryExample(): String {
-        return "It`s second service. Znode from firstservice: ${firstServiceClient.show()}";
+        return "It`s second service. Znode from First Service: ${firstServiceClient.show()}";
     }
   }
   ```
@@ -102,7 +102,7 @@ https://start.spring.io/#!type=maven-project&language=kotlin&platformVersion=2.2
     @Autowired
     lateinit var theClient: TheClient;
 
-    @FeignClient(name = "micro_service_1")
+    @FeignClient(name = "microservice1")
     interface TheClient {
 
         @RequestMapping(path = arrayOf("/"), method = arrayOf(RequestMethod.GET))
@@ -122,7 +122,7 @@ server:
     port: 8082
 spring:
   application:
-    name: micro_service_2
+    name: microservice2
   cloud:
     zookeeper:
       connect-string: localhost:2181
@@ -131,18 +131,22 @@ spring:
 ```
 
 ### Edit SERVICE_1 application.yml 
-- Activate discovery in properties with adding __spring.cloud.zookeeper.discovery.enabled: true__ like you can see below:
+- Activate discovery in properties with adding __spring.cloud.zookeeper.discovery.enabled: true__ and __management.security.enabled: false__ like you can see below:
     ```yml
     server:
         port: 8081
     spring:
       application:
-        name: micro_service_1
+        name: microservice1
       cloud:
         zookeeper:
           connect-string: localhost:2181
           discovery:
             enabled: true
+    
+    management:
+      security:
+        enabled: false
     ```
 
 - Add annotation __@EnableDiscoveryClient__ on Service1Application class (on starter class)
