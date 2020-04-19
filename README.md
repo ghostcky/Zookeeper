@@ -21,7 +21,7 @@
 ## ZNode
 
 ### Create First Spring project
-https://start.spring.io/#!type=maven-project&language=kotlin&platformVersion=2.2.6.RELEASE&packaging=jar&jvmVersion=1.8&groupId=com.example&artifactId=demo&name=demo&description=Demo%20project%20for%20Spring%20Boot&packageName=com.example.demo&dependencies=actuator,cloud-starter-zookeeper-discovery,cloud-starter-zookeeper-config,web
+https://start.spring.io/#!type=maven-project&language=kotlin&platformVersion=2.2.6.RELEASE&packaging=jar&jvmVersion=1.8&groupId=ru.liberteam.ghostcky&artifactId=Service1&name=Service1&description=&packageName=ru.liberteam.ghostcky.Service1&dependencies=actuator,cloud-starter-zookeeper-discovery,cloud-starter-zookeeper-config,web
 
 ### Create Node
     /config/micro_service_1/<valiable_name>
@@ -61,7 +61,7 @@ spring:
 ## Discovery service
 
 ### Create Second Spring project
-https://start.spring.io/#!type=maven-project&language=kotlin&platformVersion=2.2.6.RELEASE&packaging=jar&jvmVersion=1.8&groupId=com.example&artifactId=demo&name=demo&description=Demo%20project%20for%20Spring%20Boot&packageName=com.example.demo&dependencies=actuator,cloud-starter-zookeeper-discovery,cloud-starter-zookeeper-config,web
+https://start.spring.io/#!type=maven-project&language=kotlin&platformVersion=2.2.6.RELEASE&packaging=jar&jvmVersion=1.8&groupId=ru.liberteam.ghostcky&artifactId=Service2&name=Service2&description=&packageName=ru.liberteam.ghostcky.Service2&dependencies=actuator,cloud-starter-zookeeper-discovery,cloud-starter-zookeeper-config,web
 
     Add annotation @EnableDiscoveryClient on Service2Application class (on starter class)
 
