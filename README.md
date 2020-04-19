@@ -56,6 +56,8 @@ spring:
       connect-string: localhost:2181
 ```
 
+### CHECK call URL http://localhost:8081
+
 -------
 
 ## Discovery service
@@ -143,6 +145,7 @@ spring:
 
 - Add annotation __@EnableDiscoveryClient__ on Service1Application class (on starter class)
 
+### CHECK call URL http://localhost:8082/discovery-example
 
 ## Analogs: 
  - Consul and Valut (Hashicorp)
