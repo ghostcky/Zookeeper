@@ -65,6 +65,16 @@ https://start.spring.io/#!type=maven-project&language=kotlin&platformVersion=2.2
 
     Add annotation @EnableDiscoveryClient on Service2Application class (on starter class)
 
+### pom.xml
+    Add dependancy: 
+    ```xml
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-feign</artifactId>
+        <version>1.4.7.RELEASE</version>
+    </dependency>
+    ```
+
 ### MyDiscoveryEndpoint
   ```kotlin
   @RestController
@@ -93,7 +103,7 @@ https://start.spring.io/#!type=maven-project&language=kotlin&platformVersion=2.2
     @FeignClient(name = "micro_service_1")
     interface TheClient {
 
-        @RequestMapping(path = "/", method = RequestMethod.GET)
+        @RequestMapping(path = arrayOf("/"), method = arrayOf(RequestMethod.GET))
         @ResponseBody
         fun home(): String;
     }
