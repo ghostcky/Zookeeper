@@ -6,27 +6,9 @@
 1) Generate Zookeeper Cluster: https://bit.ly/2xF8pDY
     - Sign in with Docker ID (Registration needed)
 1) Create Spring project
-https://start.spring.io/
-Get generated: https://bit.ly/2xGqJfN
-<details>
-  <summary>Or generate by:</summary>  
-  <p>
-    
-### Dependencies:
-- - Spring Boot Actuator
-- - Apache Zookeeper Configuration
-- - Apache Zookeeper Discovery
-- - Spring Web
-- Project: Maven Project 
-- Language: Kotlin
-- Spring Boot: 2.3.0 M4
-- Packaging: jar
-- Java: 8
-    
-  </p>
-</details>
-
-4) Install Idea Plugin: __Zoolytic__ (Zookeeper Client)
+    - https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.2.6.RELEASE&packaging=jar&jvmVersion=1.8&groupId=com.example&artifactId=demo&name=demo&description=Demo%20project%20for%20Spring%20Boot&packageName=com.example.demo&dependencies=actuator,cloud-starter-zookeeper-discovery,cloud-starter-zookeeper-config,web
+1) Install Idea Plugin
+    - __Zoolytic__ (Zookeeper Client)
 
 ## Example
 
