@@ -39,7 +39,7 @@ https://start.spring.io/#!type=maven-project&language=kotlin&platformVersion=2.2
 
       @GetMapping("/")
       fun showVariable(): String {
-          return "It`s first micro service. Znode: $springVariable"
+          return "It`s First micro service. Znode: $springVariable"
       }
   }
   ```
@@ -89,7 +89,7 @@ https://start.spring.io/#!type=maven-project&language=kotlin&platformVersion=2.2
 
     @GetMapping("/discovery-example")
     fun discoveryExample(): String {
-        return "It`s second service. Znode from First Service: ${firstServiceClient.show()}";
+        return "It`s Second service. Znode from First Service: ${firstServiceClient.show()}";
     }
   }
   ```
@@ -121,7 +121,7 @@ https://start.spring.io/#!type=maven-project&language=kotlin&platformVersion=2.2
 ### application.yml
 ```yml
 server:
-    port: 8082
+    port: 8083
 spring:
   application:
     name: microservice2
@@ -154,6 +154,17 @@ spring:
 - Add annotation __@EnableDiscoveryClient__ on Service1Application class (on starter class)
 
 ### CHECK call URL http://localhost:8082/discovery-example
+
+## Load Balancer
+
+### Change first application
+
+1) Start first application
+1) Change returnable message on "It`s Third micro service. Znode: $springVariable"
+1) Change Port on 8082
+1) Idea -> Edit configuration -> Allow parallel run -> OK
+1) Start application new service from first project
+1) Call http://localhost:8082/discovery-example twice and see different messages
 
 ## Analogs: 
  - Consul and Valut (Hashicorp)
