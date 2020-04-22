@@ -85,26 +85,6 @@ https://start.spring.io/#!type=maven-project&language=kotlin&platformVersion=2.2
     </dependency>
     ```
 
-### MyDiscoveryEndpoint
-  ```kotlin
-  
-  import org.springframework.beans.factory.annotation.Autowired
-  import org.springframework.web.bind.annotation.GetMapping
-  import org.springframework.web.bind.annotation.RestController
-  
-  @RestController
-  class MyDiscoveryEndpoint {
-
-    @Autowired
-    lateinit var firstServiceClient: FirstServiceClient;
-
-    @GetMapping("/discovery-example")
-    fun discoveryExample(): String {
-        return "It`s Second service. Znode from First Service: ${firstServiceClient.show()}";
-    }
-  }
-  ```
-
 ### FirstServiceClient
   ```kotlin
   
@@ -135,6 +115,26 @@ https://start.spring.io/#!type=maven-project&language=kotlin&platformVersion=2.2
     
     fun show(): String {
         return theClient.home();
+    }
+  }
+  ```
+
+### MyDiscoveryEndpoint
+  ```kotlin
+  
+  import org.springframework.beans.factory.annotation.Autowired
+  import org.springframework.web.bind.annotation.GetMapping
+  import org.springframework.web.bind.annotation.RestController
+  
+  @RestController
+  class MyDiscoveryEndpoint {
+
+    @Autowired
+    lateinit var firstServiceClient: FirstServiceClient;
+
+    @GetMapping("/discovery-example")
+    fun discoveryExample(): String {
+        return "It`s Second service. Znode from First Service: ${firstServiceClient.show()}";
     }
   }
   ```
