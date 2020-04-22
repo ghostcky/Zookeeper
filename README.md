@@ -164,7 +164,7 @@ spring:
 1) Change Port on 8082
 1) Idea -> Edit configuration -> Allow parallel run -> OK
 1) Start application new service from first project
-1) Call http://localhost:8082/discovery-example twice and see different messages
+1) Call http://localhost:8083/discovery-example twice and see different messages
 
 ## Analogs: 
  - Consul and Valut (Hashicorp)
