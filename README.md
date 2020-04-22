@@ -30,6 +30,12 @@ https://start.spring.io/#!type=maven-project&language=kotlin&platformVersion=2.2
 
 ### MyEndpoint    
   ```kotlin
+  
+  import org.springframework.beans.factory.annotation.Value
+  import org.springframework.cloud.context.config.annotation.RefreshScope
+  import org.springframework.web.bind.annotation.GetMapping
+  import org.springframework.web.bind.annotation.RestController
+
   @RestController
   @RefreshScope
   class MyEndpoint {
