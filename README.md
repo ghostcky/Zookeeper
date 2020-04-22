@@ -153,7 +153,7 @@ spring:
 
 - Add annotation __@EnableDiscoveryClient__ on Service1Application class (on starter class)
 
-### CHECK call URL http://localhost:8082/discovery-example
+### CHECK call URL http://localhost:8083/discovery-example
 
 ## Load Balancer
 
