@@ -87,6 +87,11 @@ https://start.spring.io/#!type=maven-project&language=kotlin&platformVersion=2.2
 
 ### MyDiscoveryEndpoint
   ```kotlin
+  
+  import org.springframework.beans.factory.annotation.Autowired
+  import org.springframework.web.bind.annotation.GetMapping
+  import org.springframework.web.bind.annotation.RestController
+  
   @RestController
   class MyDiscoveryEndpoint {
 
@@ -102,6 +107,16 @@ https://start.spring.io/#!type=maven-project&language=kotlin&platformVersion=2.2
 
 ### FirstServiceClient
   ```kotlin
+  
+  import org.springframework.beans.factory.annotation.Autowired
+  import org.springframework.cloud.client.discovery.EnableDiscoveryClient
+  import org.springframework.cloud.openfeign.EnableFeignClients
+  import org.springframework.cloud.openfeign.FeignClient
+  import org.springframework.context.annotation.Configuration
+  import org.springframework.web.bind.annotation.RequestMapping
+  import org.springframework.web.bind.annotation.RequestMethod
+  import org.springframework.web.bind.annotation.ResponseBody
+  
   @Configuration
   @EnableFeignClients
   @EnableDiscoveryClient
