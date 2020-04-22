@@ -24,7 +24,7 @@
 https://start.spring.io/#!type=maven-project&language=kotlin&platformVersion=2.2.6.RELEASE&packaging=jar&jvmVersion=1.8&groupId=ru.liberteam.ghostcky&artifactId=Service1&name=Service1&description=&packageName=ru.liberteam.ghostcky.Service1&dependencies=actuator,cloud-starter-zookeeper-discovery,cloud-starter-zookeeper-config,web
 
 ### Create Node
-    /config/micro_service_1/<valiable_name>
+    /config/microservice1/<valiable_name>
 
 ## Project
 
